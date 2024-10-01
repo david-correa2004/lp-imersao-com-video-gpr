@@ -1,0 +1,53 @@
+#imersao{
+    .container{
+        gap: 3rem 0;
+        .title{
+            width: 60%;
+        }
+        .img{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-items: center;
+            gap: 0 2rem;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            width: 100%;
+            align-items: start;
+            gap: 1rem 0;
+            .cont{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                gap: 0 1rem;
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:800px) {
+    #imersao{
+        .container{
+            width: 90%;
+            .title{
+                width: 90%;
+            }
+            .img{
+                grid-template-columns: repeat(1,1fr);
+                gap: 2rem 0;
+            }
+            .text{
+                width: 90%;
+                h2{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

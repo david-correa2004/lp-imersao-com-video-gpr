@@ -1,0 +1,171 @@
+#home {
+    // height: 100vh;
+    padding: 30px 0;
+    background: url(../assets/img/home-fundo.webp);
+    overflow: hidden;
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-items: center start;
+        z-index: 2;
+        .text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 2rem 0;
+            img {
+                width: 20%;
+            }
+            .icon {
+                width: 70%;
+                display: grid;
+                place-items: center start;
+                .conts {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
+                    .cont {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 0 0.5rem;
+                        img {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+            h1 {
+                color: $color3;
+                font-weight: 400;
+                .strong-branco {
+                    color: $color3;
+                    font-weight: 600;
+                }
+                strong {
+                    font-weight: 400;
+                    color: $color1;
+                }
+            }
+            p {
+                width: 70%;
+            }
+        }
+        .img{
+            height: 100%;
+            width: 35%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            right: 10%;
+            bottom: -2%;
+            img{
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    #home {
+        background: url(../assets/img/home-fundo-mob.webp);
+        background-position: 40% 100%;
+        padding: 0;
+        &::before{
+            content: ('');
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: rgba($color2, 50%);
+            z-index: 1;
+        }
+        &::after{
+            content: ('');
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0, #000000, #00000084, transparent, transparent);
+            z-index: 1;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+            grid-template-columns: repeat(1,1fr);
+            place-items: center;
+            gap: 0;
+            // z-index: 1;
+            padding: 15% 0;
+            position: relative;
+            &::after{
+                content: ('');
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0, #000000, #00000084, transparent, transparent);
+                z-index: 1;
+            }
+            .img{
+                order: 1;
+                position: relative;
+                width: 30%;
+                height: auto;
+                right: auto;
+                bottom: -50%;
+                transform: scale(2);
+                z-index: -2;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .text {
+                order: 2;
+                width: 80%;
+                text-align: center;
+                align-items: center;
+                gap: 1rem 0;
+                z-index: 2;
+                // opacity: 0;
+                img{
+                    width: 30%;
+                }
+                .icon {
+                    position: fixed;
+                    width: 100%;
+                    top: 0;
+                    place-items: center;
+                    padding: 5% 0;
+                    background: $color2;
+                    .conts{
+                        width: 80%;
+                        justify-content: center;
+                        gap: 0 1rem;
+                    }
+                    .cont {
+                        justify-content: center;
+                        p{
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+                h1 {
+                    width: 100%;
+                    font-size: 20px;
+                }
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

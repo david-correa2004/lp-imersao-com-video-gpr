@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    background-repeat: no-repeat !important;
+    background-position: center;
+    background-size: cover !important;
+    object-fit: cover;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.5s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+section {
+    display: grid;
+    place-items: center;
+    height: fit-content;
+    padding: 5% 0;
+    position: relative;
+    background-position: center;
+}
+body {
+    background: #131313;
+}
+.container {
+    width: 80%;
+    display: grid;
+    place-items: center;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    height: auto;
+}
+a {
+    width: fit-content;
+}
+button {
+    background: transparent;
+    font-size: 14px;
+    width: 280px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: none;
+    color: #131313;
+    font-weight: 600;
+    cursor: pointer;
+    background: #00F180;
+    &:hover {
+        transform: scale(0.95);
+    }
+}
+h2 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 300;
+    strong{
+        font-weight: 600;
+    }
+}
+p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+::-webkit-scrollbar {
+    background: #131313;
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: #00F180;
+    border-radius: 10px;
+}
+@media (max-width: 800px) {
+    section {
+        padding: 15% 0;
+    }
+    button {
+        height: 45px;
+        background: #00F180;
+        &:hover {
+            transform: none;
+        }
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px !important;
+    }
+}
+
+$color1: #00F180;
+$color2: #131313;
+$color3: #fff;
+$color4: #424242;

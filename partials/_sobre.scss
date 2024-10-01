@@ -1,0 +1,50 @@
+#sobre{
+    background: rgba($color4, 30%);
+    .container{
+        gap: 4rem 0;
+        .conts{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-items: center;
+            gap: 0 2rem;
+            .img{
+                width: 100%;
+                display: grid;
+                place-items: center;
+                img{
+                    width: 100%;
+                }
+            }
+            .text{
+                width: 100%;
+                align-items: end;
+                gap: 1rem 0;
+                h2{
+                    width: 90%;
+                    color: $color1;
+                    font-weight: 500;
+                }
+                p{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+@media (max-width:800px) {
+    #sobre{
+        .container{
+            gap: 3rem 0;
+            .conts{
+                grid-template-columns: repeat(1,1fr);
+                gap: 2rem 0;
+                .text{
+                    h2,p{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
